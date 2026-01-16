@@ -4,16 +4,16 @@ public class Variables {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a string: ");
+        System.out.println("Enter a String: ");
         String string = scanner.nextLine();
 
         System.out.println("Enter an Integer: ");
         int integer = Integer.valueOf(scanner.nextLine());
 
-        System.out.println("Enter a double: ");
+        System.out.println("Enter a Double: ");
         double dbl = Double.valueOf(scanner.nextLine());
 
-        System.out.println("Enter a boolean: ");
+        System.out.println("Enter a Boolean: ");
         boolean bool = Boolean.valueOf(scanner.nextLine());
 
         System.out.println("String: "+ string);
