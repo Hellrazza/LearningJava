@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String name = "Ryan B";
-        String greeting = "Hello ";
-        System.out.println(greeting + name + "!");
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("What is your name? ");
+        String name = scanner.nextLine();
+
+        System.out.println("Hello " + name + "!");
+
     }
 }
