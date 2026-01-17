@@ -4,7 +4,7 @@ public class RepeatingBreakingRemember {
     public static void main(String[] args)
     {
         Scanner scanner = new Scanner(System.in);
-        Boolean loop = true;
+        boolean loop = true;
         int total = 0;
         int totalNumbers = 0;
         int totalEven = 0;
