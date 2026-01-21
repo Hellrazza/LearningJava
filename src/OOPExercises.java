@@ -1,11 +1,12 @@
 import jdk.dynalink.beans.StaticClass;
 
 import java.security.Guard;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class OOPExercises {
     public static void main(String[] args) {
-        statisticsExercise();
+        tvExercise();
     }
 
     public static void sandboxing() {
@@ -164,5 +165,35 @@ public class OOPExercises {
         System.out.println("Sum: " + allStats.sum());
         System.out.println("Sum of even numbers: " + evenStats.sum());
         System.out.println("Sum of odd numbers: " + oddStats.sum());
+    }
+
+    public static void tvExercise() {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<TelevisionProgramme> programmeList = new ArrayList<>();
+        String programmeName = "";
+        int programmeDuration = 0;
+
+        while (true) {
+            System.out.println("Enter programme name: ");
+            programmeName = scanner.nextLine();
+
+            if (programmeName.isEmpty()) break;
+
+            System.out.println("Enter programme duration in minutes: ");
+            programmeDuration = Integer.parseInt(scanner.nextLine());
+
+            programmeList.add(new TelevisionProgramme(programmeName, programmeDuration));
+        }
+
+        System.out.println("Enter maximum duration: ");
+        int durationQuery = Integer.parseInt(scanner.nextLine());
+
+        for (TelevisionProgramme programme : programmeList) {
+            if (programme.getDuration() <= durationQuery) {
+                System.out.println(programme);
+            }
+        }
+
+
     }
 }
