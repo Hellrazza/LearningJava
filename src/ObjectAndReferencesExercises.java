@@ -1,6 +1,6 @@
 public class ObjectAndReferencesExercises {
    public static void main(String[] args) {
-       healthStationExercise();
+       apartmentExercise();
    }
 
    public static void nullExercise() {
@@ -31,6 +31,18 @@ public class ObjectAndReferencesExercises {
        childrenHospital.weigh(ethan);
 
        System.out.println("Weighings performed: " + childrenHospital.getTotalWeighings());
+   }
+
+   public static void apartmentExercise() {
+       Apartment manhattanStudioApt = new Apartment(1, 16, 5500);
+       Apartment atlantaTwoBedroomApt = new Apartment(2, 38, 4200);
+       Apartment bangorThreeBedroomApt = new Apartment(3, 78, 2500);
+
+       System.out.println(manhattanStudioApt.largerThan(atlantaTwoBedroomApt));
+       System.out.println(bangorThreeBedroomApt.largerThan(atlantaTwoBedroomApt));
+
+       System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));
+       System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));
    }
 
 }
