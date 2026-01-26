@@ -1,6 +1,6 @@
 public class ObjectOrientatedExercises2 {
     public static void main(String[] args) {
-        FitbyteExercise();
+        ProductExercise();
     }
 
     public static void TimerExercise() {
@@ -40,5 +40,15 @@ public class ObjectOrientatedExercises2 {
             System.out.println("Target " + (percentage * 100) + "% of maximum: " + target);
             percentage += 0.1;
         }
+    }
+
+    public static void ProductExercise() {
+        Product tapeMeasure = new Product("Tape Measure");
+        Product plaster = new Product("Plaster", "home improvement section");
+        Product tyre = new Product("Tyre", 5);
+
+        System.out.println(tapeMeasure);
+        System.out.println(plaster);
+        System.out.println(tyre);
     }
 }

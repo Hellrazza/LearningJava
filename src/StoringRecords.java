@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class StoringRecords {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter file name: ");
+        System.out.println("Enter file name: "); //.csv
         String fileName = scanner.nextLine();
         ArrayList<Person> people = readRecordsFromFile(fileName);
 
