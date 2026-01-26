@@ -5,6 +5,8 @@ public class PaymentCard {
         this.balance = openingBalance;
     }
 
+    public double getBalance() {return this.balance;}
+
     public String toString() {
         return "The card has a balance of £" + this.balance;
     }
@@ -33,6 +35,18 @@ public class PaymentCard {
             this.balance += amount;
         } else {
             this.balance = 150;
+        }
+    }
+
+    public boolean takeMoney(double amount) {
+        if (balance >= amount)
+        {
+            balance -= amount;
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 }

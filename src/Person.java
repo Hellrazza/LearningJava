@@ -18,6 +18,16 @@ public class Person {
     public String getName() {return this.name;}
     public int getAge() {return this.age;}
 
+    public void growOlder() {
+        this.age++;
+    }
+
+    public void gainWeight(int totalWeightGained) {
+        this.weight += totalWeightGained;
+    }
+
+    public int getWeight() {return weight;}
+
     public String toString() {
         String years = " years";
         if (this.age == 1) {
