@@ -1,6 +1,6 @@
 public class ObjectAndReferencesExercises {
    public static void main(String[] args) {
-       apartmentExercise();
+       personExercise();
    }
 
    public static void nullExercise() {
@@ -43,6 +43,47 @@ public class ObjectAndReferencesExercises {
 
        System.out.println(manhattanStudioApt.priceDifference(atlantaTwoBedroomApt));
        System.out.println(bangorThreeBedroomApt.priceDifference(atlantaTwoBedroomApt));
+
+       System.out.println(manhattanStudioApt.moreExpensiveThan(atlantaTwoBedroomApt));
+       System.out.println(bangorThreeBedroomApt.moreExpensiveThan(atlantaTwoBedroomApt));
+   }
+
+   public static void petExercise() {
+       Pet shite = new Pet("Shite", "Call duck");
+       Person jackson = new Person("Jackson", shite);
+
+       System.out.println(jackson);
+   }
+
+   public static void songExercise() {
+       Song jackSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+       Song anotherSparrow = new Song("The Lonely Island", "Jack Sparrow", 196);
+
+       if (jackSparrow.equals(anotherSparrow)) {
+           System.out.println("Songs are equal.");
+       }
+
+       if (jackSparrow.equals("Another object")) {
+           System.out.println("Strange things are afoot.");
+       }
+   }
+
+   public static void personExercise() {
+       SimpleDate date = new SimpleDate(24, 3, 2017);
+       SimpleDate date2 = new SimpleDate(23, 7, 2017);
+
+       Person leo = new Person("Leo", date, 62, 9);
+       Person lily = new Person("Lily", date2, 65, 8);
+
+       if (leo.equals(lily)) {
+           System.out.println("Is this quite correct?");
+       }
+
+       Person leoWithDifferentWeight = new Person("Leo", date, 62, 10);
+
+       if (leo.equals(leoWithDifferentWeight)) {
+           System.out.println("Is this quite correct?");
+       }
    }
 
 }
