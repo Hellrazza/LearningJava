@@ -19,10 +19,9 @@ public class Apartment {
     public int priceDifference(Apartment compared) {
         int thisTotalPrice = this.pricePerSquare * this.getSquares();
         int comparedTotalPrice = compared.getPricePerSquare() * compared.getSquares();
-
-        return thisTotalPrice - comparedTotalPrice;
+        return Math.abs(thisTotalPrice - comparedTotalPrice);
     }
 
-    public int getPricePerSquare() {return squares;}
+    public int getPricePerSquare() {return pricePerSquare;}
     public int getSquares() {return squares;}
 }
