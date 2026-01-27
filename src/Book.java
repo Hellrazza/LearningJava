@@ -22,4 +22,21 @@ public class Book {
     public String getAuthor() {return this.author;}
 
     public int getPages() {return this.pages;}
+
+    public boolean equals(Object other){
+        if (this == other) {
+            return true;
+        }
+
+        if(!(other instanceof Book)) {
+            return false;
+        }
+
+        Book bookOther = (Book) other;
+
+        return author.equals(bookOther.author) && title.equals(bookOther.title) && pages == bookOther.pages && publicationYear == bookOther.publicationYear;
+
+
+
+    }
 }
