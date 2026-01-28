@@ -9,6 +9,7 @@ public class Person {
     public Person(String name, int age) {
         this(name, age, 0, 0);
     }
+    
 
     public Person(String name, int age, int height, int weight) {
         this.name = name;
@@ -41,6 +42,8 @@ public class Person {
     }
 
     public int getWeight() {return weight;}
+
+    public int getHeight() {return height;}
 
     public String toString() {
 //        String years = " years";
