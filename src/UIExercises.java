@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class UIExercises {
     public static void main(String[] args) {
-        jokeManagerExercise();
+        simpleDictionaryExercise();
     }
 
 
