@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class LiquidContainers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int first = 0;
-        int second = 0;
+        Container first = new Container();
+        Container second = new Container();
         String input = "";
         String[] parts;
         String command = "";
@@ -26,31 +26,21 @@ public class LiquidContainers {
 
             parts = input.split(" ");
             command = parts[0];
-            amount = Math.abs(Integer.parseInt(parts[1]));
+            amount = Integer.parseInt(parts[1]);
+
             if (command.equals("add")) {
-                first += amount;
-                if (first > 100) {first = 100;}
+                first.add(amount);
             }
             else if (command.equals("move")) {
-
-                first -= amount;
-                second += amount;
-
-                if (first <  0) {
-                    first = 0;
-                }
-
-                if (second > 100) {
-                    second = 100;
-                }
+                first.remove(amount);
+                second.add(amount);
             }
             else if (command.equals("remove")) {
-                second -= amount;
-                if (second < 0) {second = 0;}
+                second.remove(amount);
             }
 
-            System.out.println("First:" + first + "/100");
-            System.out.println("Second:" + second + "/100");
+            System.out.println("First:" + first);
+            System.out.println("Second:" + second);
          }
     }
 
