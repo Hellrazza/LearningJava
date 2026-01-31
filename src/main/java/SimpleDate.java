@@ -1,5 +1,3 @@
-import javax.print.attribute.standard.MediaSize;
-
 public class SimpleDate {
     private int day;
     private int month;

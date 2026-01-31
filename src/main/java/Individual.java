@@ -1,5 +1,3 @@
-import javax.lang.model.util.ElementKindVisitor6;
-
 public class Individual {
     private String name;
     private int height;
