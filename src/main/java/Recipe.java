@@ -19,6 +19,4 @@ public class Recipe {
         return name + ", cooking time: " + cookingTime;
     }
 
-
-
 }

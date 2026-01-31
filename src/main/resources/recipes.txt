@@ -4,6 +4,7 @@ milk
 egg
 flour
 salt
+sugar
 butter
 
 Meatballs
