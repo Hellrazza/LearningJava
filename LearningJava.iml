@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/mainPart2" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/mainPart2/resources" type="java-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/mainPart2/Exercises" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

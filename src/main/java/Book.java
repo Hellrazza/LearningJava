@@ -19,6 +19,12 @@ public class Book {
         this.title = title;
     }
 
+    public Book(int id, String title, int publicationYear) {
+        this.id = id;
+        this.title = title;
+        this.publicationYear = publicationYear;
+    }
+
     public String toString() {
         return this.author + "," + this.title + ", " + this.pages + " pages, " + this.publicationYear;
     }
