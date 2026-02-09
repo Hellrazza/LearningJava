@@ -3,6 +3,7 @@ import java.util.*;
 public class Book {
     private String title;
     private String author;
+    private String contents;
     private int pages;
     private int publicationYear;
     private int id;
@@ -24,9 +25,14 @@ public class Book {
         this.title = title;
         this.publicationYear = publicationYear;
     }
+    public Book(String title, int publicationYear, String contents) {
+        this.title = title;
+        this.publicationYear = publicationYear;
+        this.contents = contents;
+    }
 
     public String toString() {
-        return this.author + "," + this.title + ", " + this.pages + " pages, " + this.publicationYear;
+        return this.title + " (" + this.publicationYear + ")\nContents: " + contents;
     }
 
     public String getTitle() {
@@ -53,6 +59,8 @@ public class Book {
         return author.equals(bookOther.author) && title.equals(bookOther.title) && pages == bookOther.pages && publicationYear == bookOther.publicationYear;
 
     }
+
+
 }
 
 class SortbyId implements Comparator<Book> {

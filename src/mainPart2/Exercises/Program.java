@@ -24,4 +24,29 @@ public class Program {
             System.out.println(hashMap.get(key));
         }
     }
+
+    public static void PrintValues(HashMap<String, Book> hashMap) {
+        for (Book book : hashMap.values()) {
+            System.out.println(book);
+        }
+    }
+
+    public static void PrintValuesIfNameContains(HashMap<String, Book> hashMap, String query) {
+        query = SerialiseString(query);
+        for (Book book : hashMap.values()) {
+            if (SerialiseString(book.getTitle()).contains(query)) {
+                System.out.println(book);
+            }
+        }
+
+    }
+
+    public static String SerialiseString(String string) {
+        if (string == null) {
+            string = "";
+        }
+
+        string = string.toLowerCase();
+        return string.trim();
+    }
 }

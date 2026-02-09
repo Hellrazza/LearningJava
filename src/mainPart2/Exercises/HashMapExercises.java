@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 public class HashMapExercises {
     public static void main(String[] args) {
-        ProgramExercise();
+        IOUExercise();
     }
 
     public static void NicknameExercise() {
@@ -72,5 +72,28 @@ public class HashMapExercises {
         Program.PrintHashKeysWhere(hashmap, "i");
         System.out.println("---");
         Program.PrintValueOfKeyWhere(hashmap, ".e");
+    }
+
+    public static void PrintMeAnotherHashExercise() {
+        HashMap<String, Book> hashmap = new HashMap<>();
+        hashmap.put("sense", new Book("Sensibility", 1818, "..."));
+        hashmap.put("prejudice", new Book("Prejudice", 1813, "..."));
+
+        Program.PrintValues(hashmap);
+        System.out.println("---");
+        Program.PrintValuesIfNameContains(hashmap, "prejud");
+    }
+
+    public static void IOUExercise() {
+        IOU mattsIOU = new IOU();
+        mattsIOU.addIOU("Michael", 12.58);
+        mattsIOU.addIOU("Ryan", 10.54);
+
+        System.out.println(mattsIOU.howMuchDoIOwe("Michael"));
+        System.out.println(mattsIOU.howMuchDoIOwe("Ryan"));
+        System.out.println(mattsIOU.howMuchDoIOwe("Stan"));
+
+        mattsIOU.addIOU("Ryan", 2.00);
+        System.out.println(mattsIOU.howMuchDoIOwe("Ryan"));
     }
 }
