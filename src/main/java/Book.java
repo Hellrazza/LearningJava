@@ -56,11 +56,21 @@ public class Book {
 
         Book bookOther = (Book) other;
 
-        return author.equals(bookOther.author) && title.equals(bookOther.title) && pages == bookOther.pages && publicationYear == bookOther.publicationYear;
+        return author.equals(bookOther.author) &&
+                title.equals(bookOther.title) &&
+                pages == bookOther.pages &&
+                publicationYear == bookOther.publicationYear;
 
     }
 
+    @Override
+    public int hashCode() {
+        if (this.title == null) {
+            return this.publicationYear;
+        }
 
+        return this.publicationYear + this.title.hashCode();
+    }
 }
 
 class SortbyId implements Comparator<Book> {

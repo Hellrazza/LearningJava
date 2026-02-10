@@ -67,4 +67,13 @@ public class SimpleDate {
         newDate.advance(days);
         return newDate;
     }
+
+    @Override
+    public int hashCode() {
+        if (day == 0) {
+            return month;
+        }
+
+        return day + month + year;
+    }
 }
