@@ -8,7 +8,7 @@ public class Item {
 
     public Item(String name) {
         this.name = name;
-        this.timeCreated = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss").format(new Date());
+        this.timeCreated = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss").format(new Date());
     }
 
     public Item(String name, int weight) {
@@ -21,8 +21,28 @@ public class Item {
 
 
     public String toString() {
-//        if (this.weight.exists)
-//        return this.name + "(Created at: " + this.timeCreated + ")"; commented out for other task.
         return name + " (" + weight + "kg)";
     }
+
+    @Override
+    public boolean equals(Object other) {
+        if(this == other) { return true;}
+        
+        if(!(other instanceof Item)) {return false;}
+
+        Item otherItem = (Item) other;
+
+        return this.name.equals(otherItem.name);
+    }
+
+    @Override
+    public int hashCode() {
+        if (name.isEmpty()) {
+            name = " ";
+        }
+        return name.length();
+    }
+
+
+
 }

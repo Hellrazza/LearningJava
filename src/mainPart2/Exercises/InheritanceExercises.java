@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class InheritanceExercises {
     public static void main(String[] args) {
-        WarehouseExercise();
+        MisplacingItemBoxExercise();
     }
 
     public static void ABCExercise() {
@@ -33,6 +33,43 @@ public class InheritanceExercises {
         System.out.println(juice.getName()); // Juice
         juice.addToWarehouse(1.0);
         System.out.println(juice);           // Juice: balance = 989.7, space left 10.299999999999955
+    }
+
+    public static void WarehouseWithChangeHistoryExercise() {
+        WarehouseWithProductHistory juice = new WarehouseWithProductHistory("Juice", 1000.0, 1000.0);
+        juice.removeFromWarehouse(11.3);
+        System.out.println(juice.getName());
+        juice.addToWarehouse(1.0);
+        juice.printAnalysis();
+    }
+
+    public static void AbstractBoxExercise() {
+        BoxWithMaxWeight coffeeBox = new BoxWithMaxWeight(10);
+        coffeeBox.add(new Item("Saludo", 5));
+        coffeeBox.add(new Item("Pirkka", 5));
+        coffeeBox.add(new Item("Kopi Luwak", 5));
+
+        System.out.println(coffeeBox.isInBox(new Item("Saludo")));
+        System.out.println(coffeeBox.isInBox(new Item("Pirkka")));
+        System.out.println(coffeeBox.isInBox(new Item("Kopi Luwak")));
+    }
+
+    public static void OneItemBoxExercise() {
+        OneItemBox box = new OneItemBox();
+        box.add(new Item("Saludo", 5));
+        box.add(new Item("Pirkka", 5));
+
+        System.out.println(box.isInBox(new Item("Saludo")));
+        System.out.println(box.isInBox(new Item("Pirkka")));
+    }
+
+    public static void MisplacingItemBoxExercise() {
+        MisplacingBox box = new MisplacingBox();
+        box.add(new Item("Saludo", 5));
+        box.add(new Item("Pirkka", 5));
+
+        System.out.println(box.isInBox(new Item("Saludo")));
+        System.out.println(box.isInBox(new Item("Pirkka")));
     }
 
 }

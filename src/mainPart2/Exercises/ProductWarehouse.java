@@ -4,6 +4,7 @@ public class ProductWarehouse extends Warehouse {
     public ProductWarehouse(String name, double capacity) {
         super(capacity);
         this.name = name;
+
     }
 
     public String getName() {return name;}

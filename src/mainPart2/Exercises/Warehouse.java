@@ -8,6 +8,7 @@ public class Warehouse {
         }
 
         this.totalCapacity = totalCapacity;
+
     }
 
     public double getCapacityUsed() {return capacityUsed;}
